@@ -2,7 +2,6 @@
  * Clase: iPila, interfaz pila. 
  * @author Paulina Cano 15053
  * @author Jackeline Hidalgo 15776
- * @author Irvin Oliva 15816
  * @param <E>
  */
 public interface iPila <E> {
