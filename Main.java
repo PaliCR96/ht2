@@ -14,7 +14,7 @@ public class Main {
      */
     public static void main(String[] args) {
         Calculadora miCalculadora = new Calculadora();
-        System.out.println("El resultado es: "+Calculadora.Calcular(Calculadora.LeerArchivo("testleer.txt")));
+        System.out.println("El resultado es: "+Calculadora.Calcular(Calculadora.LeerArchivo("prueba.txt")));
     }
     
 }
