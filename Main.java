@@ -5,7 +5,6 @@ Hoja de Trabajo 2
 Clase: Main, clase principal que imprime resultado 
  * @author Paulina Cano 15053
  * @author Jackeline Hidalgo 15776
- * @author Irvin Oliva 15816
  */
 public class Main {
 
