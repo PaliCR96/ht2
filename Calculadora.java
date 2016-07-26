@@ -1,3 +1,12 @@
+/**
+Universidad del Valle de Guatemala
+Algoritmos y Estructura de datos
+Hoja de Trabajo 2
+Clase: Calculadora, clase que implementa metodos donde se lee archivo y hace calculos 
+ * @author Paulina Cano 15053
+ * @author Jackeline Hidalgo 15776
+ **/
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -14,12 +23,14 @@ public class Calculadora implements iCalculadora{
 		char[] cadena = vector.toCharArray();
 		for (char pos: cadena)
 		{
+			//Si es un numero hace un push a la pila de este
 			int numero= Character.getNumericValue(pos);
 			if(numero>=0)
 			{
 				MiPila.push(numero);
 			}
 			else
+				//Si es caracter valua para ver que operacion realizar
 			{
 				if(pos == '+')
 				{
@@ -27,7 +38,7 @@ public class Calculadora implements iCalculadora{
 				}
 				if(pos == '-')
 				{
-					resultado = MiPila.pop()-MiPila.pop();
+					resultado = -MiPila.pop()+MiPila.pop();
 				}
 				if(pos == '*')
 				{
@@ -42,24 +53,24 @@ public class Calculadora implements iCalculadora{
 		return resultado;
 	}
 
-	
+	//metodo para leer el archivo
 	@Override
-	public String LeerArchivo(String direccion) {
+	public String LeerArchivo(String direccion) { //recibe nombre del archivo
         File archivo = null;
         String linea = "";
         FileReader lector = null; 
         BufferedReader breader = null;
 
         try {
-            archivo = new File(direccion);
+            archivo = new File(direccion); //asigna el nombre del archico a la variable archivo
             lector = new FileReader(archivo);
             breader= new BufferedReader(lector);
 
-            linea = breader.readLine();
+            linea = breader.readLine(); //lee linea
         
         }
         catch(IOException ex) {
-            System.out.println("No se lee el archivo");                  
+            System.out.println("No se lee el archivo"); //imprime mensaje si no lee el archivo                  
         
         }
 		return linea;
